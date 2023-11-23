@@ -18,5 +18,5 @@ jobs:
         args: -c "echo 'Hello from Docker Action' > /github/home/myfile.txt"
 
     - name: Read data from file
-      run: cat /github/home/myfile.txt
+      run: cat /home/runner/work/_temp/_github_home/myfile.txt
 

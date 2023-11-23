@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: View workspace
-      run: echo "workspace path: $RUNNER_WORKSPACE"
+      run: echo 'workspace path: $RUNNER_WORKSPACE'
 
     - name: Use Docker image as an action
       id: mydockeraction

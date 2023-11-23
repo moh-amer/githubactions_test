@@ -1,0 +1,22 @@
+name: Docker Action Communication Example
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Use Docker image as an action
+      id: mydockeraction
+      uses: docker://alpine:latest
+      with:
+        entrypoint: sh
+        args: -c "echo 'Hello from Docker Action' > /github/workspace/myfile.txt"
+
+    - name: Read data from file
+      run: cat /github/workspace/myfile.txt
+

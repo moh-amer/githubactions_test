@@ -13,6 +13,9 @@ jobs:
     - name: View workspace
       run: echo $RUNNER_WORKSPACE
 
+    - name: View workspace
+      run: env
+
     - name: Use Docker image as an action
       id: mydockeraction
       uses: docker://alpine:latest

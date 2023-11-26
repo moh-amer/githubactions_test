@@ -10,9 +10,10 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
+
     - name: Use My Custom Action
       id: mycustomaction
-      uses: ./.github/actions/custom-name-action
+      uses: ./githubactions_test/.github/actions/custom-name-action
       with:
         myInput: 'Mohamed'
 

@@ -1,0 +1,16 @@
+# /actions/my-custom-action/action.yml
+name: 'My Custom Action'
+description: 'Describe your action here'
+inputs:
+  myInput:
+    description: 'Description of your input'
+    required: true
+
+outputs:
+  myOutput:
+    description: 'Description of your output'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+

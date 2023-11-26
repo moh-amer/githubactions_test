@@ -1,0 +1,21 @@
+name: My Workflow
+
+on: [push]
+
+jobs:
+  myJob:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Use My Custom Action
+      id: mycustomaction
+      uses: ./actions/custom-name-action
+      with:
+        myInput: 'Mohamed'
+
+    - name: Print Output
+      run: echo "Output: ${{ steps.mycustomaction.outputs.myOutput }}"
+

@@ -13,7 +13,7 @@ jobs:
 
     - name: Use My Custom Action
       id: mycustomaction
-      uses: ./githubactions_test/.github/actions/custom-name-action
+      uses: ../actions/custom-name-action
       with:
         myInput: 'Mohamed'
 

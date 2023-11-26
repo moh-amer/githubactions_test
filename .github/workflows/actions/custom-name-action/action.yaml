@@ -9,7 +9,6 @@ inputs:
 outputs:
   myOutput:
     description: 'Description of your output'
-    value: ${{ steps.mycustomaction.outputs.myOutput }}
 
 runs:
   using: 'docker'

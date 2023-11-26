@@ -17,5 +17,4 @@ jobs:
         myInput: 'Mohamed'
 
     - name: Print Output
-      run: echo "Output: ${{ steps.mycustomaction.outputs.myOutput }}"
-
+      run: echo  ${{ steps.mycustomaction.outputs.myOutput }}
